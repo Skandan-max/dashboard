@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>*{background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fto%2520do%2520list%2F&psig=AOvVaw0aGA4URwr-RQGLg27zlfXC&ust=1685692523130000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPio8ZLMof8CFQAAAAAdAAAAABAE");
+  }</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+  <li>Hit the gym</li>
+  <li>fill wmo app</li>
+  <li>buy snacks for ipl</li>
+  <li>stdy ph1020</li>
+  <li>go for a swim</li>
+  <li>read a book(i know i won't)</li>
+</ul>
+
+<script>
+
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') 
+    alert("You must write something!");
+  else 
+    document.getElementById("myUL").appendChild(li);
+
+}
+</script>
+
+</body>
+</html>

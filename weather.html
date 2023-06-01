@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Current Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
+    <link rel="stylesheet" href="weather.css">
+    <link href='https://fonts.googleapis.com/css?family=Space Grotesk' rel='stylesheet'>
+    
+    
+</head>
+<body>
+    <div class="navbar">
+        <h1>Weather</h1>
+    </div>
+    <div class="container">
+        <div class="left">
+            <div class="srcing">
+                <form onsubmit="return weatherAPI()">
+                <h2>city you wanna search for?</h2>
+                <br>
+                <label for="city">Search City:</label>
+                <br>
+                <input type="text" id="city" name="city" >
+                <button type="submit" class="sbt" id="submitbutton"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <br>
+                <div class="error"></div>
+                <br>
+                </form>
+            </div>
+            <div class="srccity" height=100%>
+                <h2 id="cityinfo">Information On City</h2>
+                <center>
+                    <p class="cityname"></p>
+                    <p class="regionname"></p>
+                    <p class="localtime"></p>
+                    <p class='latitude'></p>
+                    <p class='longitude'></p>
+                </center>
+                
+            </div>
+        </div>
+        <div class="city">
+            <h2 id="cityweather">Weather Information:</h2>
+            <br>
+            <br>
+            <center>
+                <div class="icon" >
+                    
+                </div>
+                <p id="geninfo"></p>
+                <div class="temp weather">
+                    
+                </div>
+                
+                <div class="wind weather">
+                    
+                </div>
+                <div class="humidity weather">
+                   
+                </div>
+                
+                <div class="precip weather">
+                   
+                </div>
+                <div class="visibility weather">
+                   
+                </div>
+                <div class="pressure weather">
+                    
+                </div>
+            </center>
+        </div>
+        
+    </div>
+    
+    <script src="scriptwebapp.js"></script>
+</body>
+</html>
